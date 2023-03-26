@@ -6,7 +6,7 @@ import android.os.Bundle;
 public class AdvancedCalcActivity extends AppCompatActivity {
 
     CalculatorButtonConfigurator calculatorButtonConfigurator;
-    /* Backup for screen rotation */
+    /* Backup for saving result between rotations */
     private String tempResult;
 
     @Override
