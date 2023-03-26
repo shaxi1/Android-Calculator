@@ -111,7 +111,21 @@ public class CalculatorButtonConfigurator {
 
 
     void configureResultButton(Activity activity) {
+        Button result = (Button) activity.findViewById(R.id.btn_equals);
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (calculator.result.length() == 0)
+                    return;
 
+                char lastChar = calculator.result.charAt(calculator.result.length() - 1);
+                if (!Character.isDigit(lastChar))
+                    return;
+
+                calculator.result = String.valueOf(calculator.evaluate());
+                refreshResult(activity);
+            }
+        });
     }
 
     void configureNumberButtons(Activity activity) {
