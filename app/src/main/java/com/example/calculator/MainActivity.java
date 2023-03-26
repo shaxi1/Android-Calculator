@@ -16,6 +16,28 @@ public class MainActivity extends AppCompatActivity {
 
         configureAboutButton();
         configureExitButton();
+        configureSimpleCalcButton();
+        configureAdvancedCalcButton();
+    }
+
+    private void configureAdvancedCalcButton() {
+        Button advancedButton = (Button) findViewById(R.id.advancedButton);
+        advancedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AdvancedCalcActivity.class));
+            }
+        });
+    }
+
+    private void configureSimpleCalcButton() {
+        Button simpleButton = (Button) findViewById(R.id.simpleButton);
+        simpleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SimpleCalcActivity.class));
+            }
+        });
     }
 
     private void configureAboutButton() {
