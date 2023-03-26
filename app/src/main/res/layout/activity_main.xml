@@ -37,16 +37,16 @@
         android:onClick="launchActivity2"/>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/aboutButton"
         android:text="About"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:onClick="launchActivity3"/>
+        android:onClick="switchToViewAbout"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/exitButton"
         android:text="Exit"
         android:layout_width="0dp"
         android:layout_height="0dp"
