@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class CalculatorButtonConfigurator {
     Calculator calculator;
     public CalculatorButtonConfigurator () {
@@ -29,7 +32,7 @@ public class CalculatorButtonConfigurator {
                 char lastChar;
                 if (calculator.result.length() != 0) {
                     lastChar = calculator.result.charAt(calculator.result.length() - 1);
-                    if (!Character.isDigit(lastChar))
+                    if (!Character.isDigit(lastChar) && lastChar != ')')
                         return;
                 } else if (!buttonText.equals("-")) {
                     return;
@@ -119,7 +122,7 @@ public class CalculatorButtonConfigurator {
                     return;
 
                 char lastChar = calculator.result.charAt(calculator.result.length() - 1);
-                if (!Character.isDigit(lastChar))
+                if (!Character.isDigit(lastChar) && lastChar != ')')
                     return;
 
                 calculator.result = String.valueOf(calculator.evaluate());
@@ -161,6 +164,59 @@ public class CalculatorButtonConfigurator {
     }
 
     void configureAdvancedOperators(Activity activity) {
+        Button squareRoot = (Button) activity.findViewById(R.id.btn_square);
+        Button square = (Button) activity.findViewById(R.id.btn_expo);
+        Button pi = (Button) activity.findViewById(R.id.btn_pi);
+        Button log = (Button) activity.findViewById(R.id.btn_log);
+        Button ln = (Button) activity.findViewById(R.id.btn_ln);
+        Button sin = (Button) activity.findViewById(R.id.btn_sin);
+        Button cos = (Button) activity.findViewById(R.id.btn_cos);
+        Button tan = (Button) activity.findViewById(R.id.btn_tan);
 
+        View.OnClickListener addOperator = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (calculator.result.length() == 0)
+                    return;
+
+                String lastNumber = getAndRemoveLastNumber(calculator.result);
+                if (lastNumber == null)
+                    return;
+                calculator.result = calculator.result.substring(0, calculator.result.length() - lastNumber.length());
+
+                String buttonText = ((Button) v).getText().toString();
+                if (buttonText.equals("x²")) {
+                    calculator.result += lastNumber + "^2";
+                } else if (buttonText.equals("pi")) {
+                    calculator.result += "pi";
+                } else {
+                    calculator.result += buttonText + "(" + lastNumber + ")";
+                }
+
+                refreshResult(activity);
+            }
+        };
+        squareRoot.setOnClickListener(addOperator);
+        square.setOnClickListener(addOperator);
+        pi.setOnClickListener(addOperator);
+        log.setOnClickListener(addOperator);
+        ln.setOnClickListener(addOperator);
+        sin.setOnClickListener(addOperator);
+        cos.setOnClickListener(addOperator);
+        tan.setOnClickListener(addOperator);
+    }
+
+    String getAndRemoveLastNumber(String expression) {
+        if (expression.length() == 0)
+            return "";
+
+        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+        Matcher matcher = pattern.matcher(expression);
+        String lastNumber = null;
+
+        while (matcher.find())
+            lastNumber = matcher.group();
+
+        return lastNumber;
     }
 }
