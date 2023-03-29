@@ -1,12 +1,9 @@
 package com.example.calculator;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,8 +29,8 @@ public class CalculatorButtonConfigurator {
                 char lastChar;
                 if (calculator.result.length() != 0) {
                     lastChar = calculator.result.charAt(calculator.result.length() - 1);
-                    if (!Character.isDigit(lastChar) && lastChar != ')')
-                        return;
+//                    if (!Character.isDigit(lastChar) && lastChar != ')')
+//                        return;
                 } else if (!buttonText.equals("-")) {
                     return;
                 }
@@ -166,7 +163,7 @@ public class CalculatorButtonConfigurator {
     void configureAdvancedOperators(Activity activity) {
         Button squareRoot = (Button) activity.findViewById(R.id.btn_square);
         Button square = (Button) activity.findViewById(R.id.btn_expo);
-        Button pi = (Button) activity.findViewById(R.id.btn_pi);
+        Button expo_spec = (Button) activity.findViewById(R.id.btn_spec_expo);
         Button log = (Button) activity.findViewById(R.id.btn_log);
         Button ln = (Button) activity.findViewById(R.id.btn_ln);
         Button sin = (Button) activity.findViewById(R.id.btn_sin);
@@ -182,13 +179,15 @@ public class CalculatorButtonConfigurator {
                 String lastNumber = getAndRemoveLastNumber(calculator.result);
                 if (lastNumber == null)
                     return;
-                calculator.result = calculator.result.substring(0, calculator.result.length() - lastNumber.length());
 
                 String buttonText = ((Button) v).getText().toString();
+                if (!buttonText.equals("^"))
+                    calculator.result = calculator.result.substring(0, calculator.result.length() - lastNumber.length());
+
                 if (buttonText.equals("x²")) {
                     calculator.result += lastNumber + "^2";
-                } else if (buttonText.equals("pi")) {
-                    calculator.result += "pi";
+                } else if (buttonText.equals("^")) {
+                    calculator.result += "^";
                 } else {
                     calculator.result += buttonText + "(" + lastNumber + ")";
                 }
@@ -198,7 +197,7 @@ public class CalculatorButtonConfigurator {
         };
         squareRoot.setOnClickListener(addOperator);
         square.setOnClickListener(addOperator);
-        pi.setOnClickListener(addOperator);
+        expo_spec.setOnClickListener(addOperator);
         log.setOnClickListener(addOperator);
         ln.setOnClickListener(addOperator);
         sin.setOnClickListener(addOperator);
