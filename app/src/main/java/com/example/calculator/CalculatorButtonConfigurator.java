@@ -29,6 +29,12 @@ public class CalculatorButtonConfigurator {
                 char lastChar;
                 if (calculator.result.length() != 0) {
                     lastChar = calculator.result.charAt(calculator.result.length() - 1);
+                    if (lastChar == '-' && buttonText.equals("-")) {
+                        calculator.result = calculator.result.substring(0, calculator.result.length() - 1);
+                        calculator.result += "+";
+                        refreshResult(activity);
+                        return;
+                    }
 //                    if (!Character.isDigit(lastChar) && lastChar != ')')
 //                        return;
                 } else if (!buttonText.equals("-")) {
