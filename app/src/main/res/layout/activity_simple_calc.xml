@@ -16,7 +16,11 @@
         android:gravity="end"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:padding="1dp" />
+        android:padding="1dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_clear"
@@ -26,7 +30,11 @@
         android:layout_columnSpan="2"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_backspace"
@@ -35,7 +43,11 @@
         android:layout_row="1"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_divide"
@@ -44,7 +56,11 @@
         android:layout_row="1"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_7"
@@ -53,7 +69,11 @@
         android:layout_row="2"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_8"
@@ -62,7 +82,11 @@
         android:layout_row="2"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_9"
@@ -71,7 +95,11 @@
         android:layout_row="2"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_multiply"
@@ -80,7 +108,11 @@
         android:layout_row="2"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_4"
@@ -89,7 +121,11 @@
         android:layout_row="3"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_5"
@@ -98,7 +134,11 @@
         android:layout_row="3"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_6"
@@ -107,7 +147,11 @@
         android:layout_row="3"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_subtract"
@@ -116,7 +160,11 @@
         android:layout_row="3"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_1"
@@ -125,7 +173,11 @@
         android:layout_row="4"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_2"
@@ -134,7 +186,11 @@
         android:layout_row="4"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_3"
@@ -143,7 +199,11 @@
         android:layout_row="4"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
     <Button
         android:id="@+id/btn_add"
         android:text="+"
@@ -151,7 +211,11 @@
         android:layout_row="4"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_0"
@@ -160,7 +224,11 @@
         android:layout_row="5"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_decimal"
@@ -170,7 +238,11 @@
         android:layout_columnSpan="2"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
     <Button
         android:id="@+id/btn_equals"
@@ -179,7 +251,11 @@
         android:layout_row="5"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="34sp"
+        android:autoSizeStepGranularity="2sp"/>
 
 </GridLayout>
 
