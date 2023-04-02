@@ -35,8 +35,6 @@ public class CalculatorButtonConfigurator {
                         refreshResult(activity);
                         return;
                     }
-//                    if (!Character.isDigit(lastChar) && lastChar != ')')
-//                        return;
                 } else if (!buttonText.equals("-")) {
                     return;
                 }
