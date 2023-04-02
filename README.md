@@ -2,15 +2,15 @@
 
 Calculator app with advanced and simple layouts.
 Expression evalutation made with [Math Parser](https://mathparser.org/).
-</br></br> Responsive UI for basically any screen size
-<center>
+Responsive UI for basically any screen size.
 
-![menu](/menu_port.jpeg)
-![menu](/menu_land.jpeg)
-![menu](/simple_land.jpeg)
-![menu](/simple_port.jpeg)
-![menu](/simple_port2.jpeg)
-![menu](/advanced_land2.jpeg)
-![menu](/advanced_land3.jpeg)
+<p align="center">
+  <img src="/menu_port.jpeg" alt="menu">
+  <img src="/menu_land.jpeg" alt="menu">
+  <img src="/simple_land.jpeg" alt="simple">
+  <img src="/simple_port.jpeg" alt="simple">
+  <img src="/simple_port%202.jpeg" alt="simple">
+  <img src="/advanced_land2.jpeg" alt="advanced">
+  <img src="/advanced_land3.jpeg" alt="advanced">
+</p>
 
-</center>
